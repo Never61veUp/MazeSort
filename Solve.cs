@@ -6,8 +6,6 @@ public class Solve
     private readonly int[] _energyCost = [1, 10, 100, 1000];
     private readonly int[] _roomEntrances = [2, 4, 6, 8];
     
-    private readonly bool[] _isEntrance = new bool[11];
-    
     private State _goal;
 
     public int Dijkstra(State target)
@@ -90,8 +88,7 @@ public class Solve
                     roomIsDone = false;
                     break;
                 }
-
-            // Console.WriteLine($"Room {roomIndex} is done: {roomIsDone}");
+            
             if (roomIsDone)
                 continue;
 
