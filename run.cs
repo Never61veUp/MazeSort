@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Collections;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 var lines = new List<string>();
 string? line;
