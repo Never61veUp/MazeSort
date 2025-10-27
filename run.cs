@@ -75,7 +75,7 @@ public class Solve
 
             if (current == _goal)
             {
-                Console.WriteLine($"Reached Goal in {counter} steps.");
+                // Console.WriteLine($"Reached Goal in {counter} steps.");
                 return currentCost;
             }
             
