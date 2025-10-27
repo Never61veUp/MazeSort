@@ -7,7 +7,7 @@ using System.Linq;
 var lines = new List<string>();
 string? line;
 
-while ((line = Console.ReadLine()) != string.Empty)
+while ((line = Console.ReadLine()) != null)
 {
     lines.Add(line);
 }
