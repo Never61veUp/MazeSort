@@ -1,23 +1,24 @@
-﻿namespace MazeSort;
-
-public record State(string Hallway, string[] Rooms)
+﻿namespace MazeSort
 {
-    public virtual bool Equals(State? obj)
+    public record State(string Hallway, string[] Rooms)
     {
-        if (obj is not State other)
-            return false;
+        public virtual bool Equals(State? obj)
+        {
+            if (obj is not State other)
+                return false;
 
-        return Hallway == other.Hallway &&
-               Rooms.SequenceEqual(other.Rooms);
-    }
+            return Hallway == other.Hallway &&
+                   Rooms.SequenceEqual(other.Rooms);
+        }
 
-    public override int GetHashCode()
-    {
-        var hash = Hallway.GetHashCode();
+        public override int GetHashCode()
+        {
+            var hash = Hallway.GetHashCode();
         
-        foreach (var room in Rooms) 
-            hash = HashCode.Combine(hash, room);
+            foreach (var room in Rooms) 
+                hash = HashCode.Combine(hash, room);
         
-        return hash;
+            return hash;
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace MazeSort;
-
-public class Solve
+﻿namespace MazeSort
+{
+    public class Solve
 {
     private readonly char[] _amphipodTypes = ['A', 'B', 'C', 'D'];
     private readonly int[] _energyCost = [1, 10, 100, 1000];
@@ -182,3 +182,5 @@ public class Solve
         return moves;
     }
 }
+}
+
